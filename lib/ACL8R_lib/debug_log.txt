@@ -1,0 +1,6 @@
+Processed URL: MX.3 - RBI_GOLDEN CONFIG
+Extracted HostWord: 
+Processed URL: MX.3 - MX [PID:751102643 NPID:318021 SID:1106147460 Host:hp1179srv.fr.murex.com] hp1179srv:27258
+Extracted HostWord: hp1179srv
+Processed URL: MX.3 - MX [PID:751102643 NPID:318021 SID:1106147460 Host:hp1179srv.fr.murex.com] hp1179srv:27258
+Extracted HostWord: hp1179srv

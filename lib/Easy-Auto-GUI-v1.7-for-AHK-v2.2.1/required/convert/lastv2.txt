@@ -1,0 +1,37 @@
+﻿
+#Requires Autohotkey v2
+;AutoGUI 2.5.8 creator: Alguimist autohotkey.com/boards/viewtopic.php?f=64&t=89901
+;AHKv2converter creator: github.com/mmikeww/AHK-v2-script-converter
+;Easy_AutoGUI_for_AHKv2 github.com/samfisherirl/Easy-Auto-GUI-for-AHK-v2
+
+myGui := Gui()
+SB := myGui.Add("StatusBar", , "Status Bar")
+ListViewTaskNameTaskDescriptionPriorityDifficultyDueDate := myGui.Add("ListView", "x16 y56 w528 h695 +LV0x4000", ["Task Name", "Task Description", "Priority", "Difficulty", "Due Date"])
+ButtonAddNewTask := myGui.Add("Button", "x16 y16 w80 h23", "&Add New Task")
+ButtonEditTask := myGui.Add("Button", "x104 y16 w80 h23", "&Edit Task")
+ButtonCompleteTask := myGui.Add("Button", "x16 y776 w80 h23", "&Complete Task")
+ButtonDeleteTask := myGui.Add("Button", "x104 y776 w80 h23", "&Delete Task")
+ButtonSaveTaskList := myGui.Add("Button", "x352 y776 w80 h23", "&Save Task List")
+ButtonLoadTaskList := myGui.Add("Button", "x440 y776 w80 h24", "&Load Task List")
+ButtonAddNewTask.OnEvent("Click", OnEventHandler)
+ButtonEditTask.OnEvent("Click", OnEventHandler)
+ButtonCompleteTask.OnEvent("Click", OnEventHandler)
+ButtonDeleteTask.OnEvent("Click", OnEventHandler)
+ButtonSaveTaskList.OnEvent("Click", OnEventHandler)
+ButtonLoadTaskList.OnEvent("Click", OnEventHandler)
+myGui.OnEvent('Close', (*) => ExitApp())
+myGui.Title := "Window"
+myGui.Show("w562 h882")
+
+OnEventHandler(*)
+{
+	ToolTip("Click! This is a sample action.`n"
+	. "Active GUI element values include:`n"  
+	. "ButtonAddNewTask => " ButtonAddNewTask.Text "`n" 
+	. "ButtonEditTask => " ButtonEditTask.Text "`n" 
+	. "ButtonCompleteTask => " ButtonCompleteTask.Text "`n" 
+	. "ButtonDeleteTask => " ButtonDeleteTask.Text "`n" 
+	. "ButtonSaveTaskList => " ButtonSaveTaskList.Text "`n" 
+	. "ButtonLoadTaskList => " ButtonLoadTaskList.Text "`n", 77, 277)
+	SetTimer () => ToolTip(), -3000 ; tooltip timer
+}

@@ -1,0 +1,15 @@
+﻿Gui Add, StatusBar,, Status Bar
+Gui Add, ListView, x16 y56 w528 h695 +LV0x4000, Task Name| Task Description | Priority | Difficulty | Due Date
+Gui Add, Button, x16 y16 w80 h23, &Add New Task
+Gui Add, Button, x104 y16 w80 h23, &Edit Task
+Gui Add, Button, x16 y776 w80 h23, &Complete Task
+Gui Add, Button, x104 y776 w80 h23, &Delete Task
+Gui Add, Button, x352 y776 w80 h23, &Save Task List
+Gui Add, Button, x440 y776 w80 h24, &Load Task List
+
+Gui Show, w562 h882, Window
+Return
+
+GuiEscape:
+GuiClose:
+    ExitApp
